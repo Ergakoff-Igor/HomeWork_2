@@ -118,3 +118,5 @@ if (ChoseNumber < 1 || ChoseNumber > 2)
 {
     Console.WriteLine("Есть только 2 варианта решения");
 }
+
+
