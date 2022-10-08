@@ -24,7 +24,7 @@ else {
 78 -> третьей цифры нет
 32679 -> 6
 ****************************************************************************************************************/
-
+/*
 Console.WriteLine ("Введите трехзначное число");
 int Number = int.Parse(Console.ReadLine()!);
 
@@ -47,3 +47,74 @@ if (Number > 9999 && Number < 100000) {
     ThirdNumber = (Number % 1000) / 100;
 }
 Console.WriteLine ($"Третья цифра числа {Number} -> {ThirdNumber}");
+*/
+/**************************************************************************************************************
+Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным. Обязательно сделать проверку на ввод чисел меньше 1 и больше 7
+6 -> да
+7 -> да
+1 -> нет
+****************************************************************************************************************/
+Console.WriteLine("Выберите вариант решения (1 или 2)");
+int ChoseNumber = int.Parse(Console.ReadLine()!);
+
+if (ChoseNumber == 1)
+{
+    Console.WriteLine("Введи число от 1 до 7: ");
+    int x = int.Parse(Console.ReadLine()!);
+
+    if (x == 1)
+    {
+        Console.WriteLine("Понедельник - Рабочий день");
+    }
+    if (x == 2)
+    {
+        Console.WriteLine("Вторник - Рабочий день");
+    }
+    if (x == 3)
+    {
+        Console.WriteLine("Среда - Рабочий день");
+    }
+    if (x == 4)
+    {
+        Console.WriteLine("Четверг - Рабочий день");
+    }
+    if (x == 5)
+    {
+        Console.WriteLine("Пятница - Рабочий день");
+    }
+    if (x == 6)
+    {
+        Console.WriteLine("Суббота - Выходной");
+    }
+    if (x == 7)
+    {
+        Console.WriteLine("Воскресенье - Выходной");
+    }
+    else if (x < 1 || x > 7)
+    {
+        Console.WriteLine("Неправильное число");
+    }
+}
+
+if (ChoseNumber == 2)
+{
+    Console.WriteLine("Введи число от 1 до 7: ");
+    int x = int.Parse(Console.ReadLine()!);
+
+    if (x < 1 || x > 7)
+    {
+        Console.WriteLine("Неправильное число");
+    }
+    if (x < 6 && x > 0)
+    {
+        Console.WriteLine("Рабочий день");
+    }
+    else
+    {
+        Console.WriteLine("Выходной");
+    }
+    }
+if (ChoseNumber < 1 || ChoseNumber > 2)
+{
+    Console.WriteLine("Есть только 2 варианта решения");
+}
